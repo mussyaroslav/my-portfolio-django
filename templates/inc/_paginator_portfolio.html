@@ -1,0 +1,74 @@
+{% load i18n %}
+{% load static %}
+<section class="paginator__section">
+    <div class="container">
+        <div class="paginator__div">
+            <div>
+            {% if page_obj.has_other_pages %}
+                {% if page_obj.number == 1 and page_obj.has_next and page_obj.next_page_number == page_obj.paginator.num_pages %}
+                    <p class="previous__non__active"></p>
+                    <p class="first__non__active">1</p>
+                    <a class="first__active" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    <a href="?page={{ page_obj.next_page_number }}"><span class="next__active"></span></a>
+                {% endif %}
+                {% if page_obj.number == page_obj.paginator.num_pages and page_obj.previous_page_number == 1 %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="previous__active"></span></a>
+                    <a class="first__active" href="?page=1">1</a>
+                    <p class="first__non__active">{{ page_obj.paginator.num_pages }}</p>
+                    <p class="next__non__active"></p>
+                {% endif %}
+                {% if page_obj.number == 1 and page_obj.has_next and page_obj.paginator.num_pages != 2 %}
+                    <p class="previous__non__active"></p>
+                    <p class="first__non__active">1</p>
+                    <a class="first__active" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+                    <a class="first__active" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    <a href="?page={{ page_obj.next_page_number }}"><span class="next__active"></span></a>
+                {% endif %}
+                {% if page_obj.number == 2 and page_obj.paginator.num_pages == 3 and page_obj.previous_page_number == 1 %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="previous__active"></span></a>
+                    <a class="first__active" href="?page=1">1</a>
+                    <p class="first__non__active">{{ page_obj.number }}</p>
+                    <a class="first__active" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    <a href="?page={{ page_obj.next_page_number }}"><span class="next__active"></span></a>
+                {% endif %}
+                {% if page_obj.number != 1 and page_obj.next_page_number != page_obj.paginator.num_pages and page_obj.previous_page_number != 1 %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="previous__active"></span></a>
+                    <a class="first__active" href="?page=1">1</a>
+                    <a class="first__active" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+                    <p class="first__non__active">{{ page_obj.number }}</p>
+                    <a class="first__active" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+                    <a class="first__active" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    <a href="?page={{ page_obj.next_page_number }}"><span class="next__active"></span></a>
+                {% endif %}
+                {% if page_obj.number == 2 and page_obj.paginator.num_pages != 3 and page_obj.has_next %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="previous__active"></span></a>
+                    <a class="first__active" href="?page=1">1</a>
+                    <p class="first__non__active">{{ page_obj.number }}</p>
+                    <a class="first__active" href="?page={{ page_obj.next_page_number }}">{{ page_obj.next_page_number }}</a>
+                    <a class="first__active" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    <a href="?page={{ page_obj.next_page_number }}"><span class="next__active"></span></a>
+                {% endif %}
+                {% if page_obj.number != 1 and page_obj.next_page_number == page_obj.paginator.num_pages and page_obj.paginator.num_pages != 3 %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="previous__active"></span></a>
+                    <a class="first__active" href="?page=1">1</a>
+                    <a class="first__active" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+                    <p class="first__non__active">{{ page_obj.number }}</p>
+                    <a class="first__active" href="?page={{ page_obj.paginator.num_pages }}">{{ page_obj.paginator.num_pages }}</a>
+                    <a href="?page={{ page_obj.next_page_number }}"><span class="next__active"></span></a>
+                {% endif %}
+                {% if page_obj.number == page_obj.paginator.num_pages and page_obj.previous_page_number != 1 %}
+                    <a href="?page={{ page_obj.previous_page_number }}"><span class="previous__active"></span></a>
+                    <a class="first__active" href="?page=1">1</a>
+                    <a class="first__active" href="?page={{ page_obj.previous_page_number }}">{{ page_obj.previous_page_number }}</a>
+                    <p class="first__non__active">{{ page_obj.paginator.num_pages }}</p>
+                    <p class="next__non__active"></p>
+                {% endif %}
+            {% else %}
+                <p class="previous__non__active"></p>
+                <p class="first__non__active">1</p>
+                <p class="next__non__active"></p>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+</section>

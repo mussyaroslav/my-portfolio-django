@@ -1,0 +1,45 @@
+{% load i18n %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=2.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="{% static 'css/header.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown_lang.css' %}">
+    <link rel="stylesheet" href="{% static 'css/container.css' %}">
+    <link rel="stylesheet" href="{% static 'css/dropdown_nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/theme_toggle.css' %}">
+    <link rel="stylesheet" href="{% static 'css/portfolio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/portfolio_nav.css' %}">
+    <link rel="stylesheet" href="{% static 'css/logo_animate.css' %}">
+    <link rel="stylesheet" href="{% static 'css/view_portfolio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/swiper_portfolio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/footer.css' %}">
+    <link rel="stylesheet" href="{% static 'css/paginator_portfolio.css' %}">
+    <link rel="stylesheet" href="{% static 'css/my_stack.css' %}">
+    <link id="theme-style" rel="stylesheet" href="">
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+<div class="wrapper">
+    {% include 'inc/_nav.html' %}
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+    {% include 'inc/_footer.html' %}
+</div>
+    <script type="text/javascript" src="{% static 'js/theme_switch.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/dropdown.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/svg_animate.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/swiper_portfolio.js' %}"></script>
+</body>
+</html>

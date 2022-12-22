@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+    {% translate "My stack" %}
+{% endblock %}
+{% block content %}
+    <div class="my__stack__section">
+        <div class="container">
+            <div class="my__stack__div">
+
+                {% comment %} Django logo {% endcomment %}
+                <div class="my__stack__case">
+                    <a href="https://www.djangoproject.com/">
+                        <div class="my__stack__image">
+                            <img src="{% static 'media/images/mystack/django_logo.png' %}" alt="">
+                        </div>
+                        <div class="my__stack__title__div">
+                            <div class="my__stack__title">
+                                <h3>Django</h3>
+                            </div>
+                            <div class="my__stack__subtitle">
+                                <p>{% translate "Django is a high-level Python web framework that encourages rapid development and clean, pragmatic design." %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% comment %} Dlango logo {% endcomment %}
+
+                {% comment %} Heroku logo {% endcomment %}
+                <div class="my__stack__case">
+                    <a href="https://www.heroku.com/">
+                        <div class="my__stack__image">
+                            <img src="{% static 'media/images/mystack/heroku-logo-solid-white.png' %}" alt="">
+                        </div>
+                        <div class="my__stack__title__div">
+                            <div class="my__stack__title">
+                                <h3>Heroku</h3>
+                            </div>
+                            <div class="my__stack__subtitle">
+                                <p>{% translate "Heroku provides services and tools to build, run, and scale web applications. Heroku enable developers and teams to focus on the design and craft of their apps." %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% comment %} Heroku logo {% endcomment %}
+
+                {% comment %} PostgreSQL logo {% endcomment %}
+                <div class="my__stack__case">
+                    <a href="https://www.postgresql.org/">
+                        <div class="my__stack__image">
+                            <img src="{% static 'media/images/mystack/Postgresql_elephant.png' %}" alt="">
+                        </div>
+                        <div class="my__stack__title__div">
+                            <div class="my__stack__title">
+                                <h3>PostgreSQL</h3>
+                            </div>
+                            <div class="my__stack__subtitle">
+                                <p>{% translate "PostgreSQL is a powerful, open source object-relational database system with over 30 years of active development that has earned it a strong reputation for reliability, feature robustness, and performance." %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% comment %} PostgreSQL logo {% endcomment %}
+
+                {% comment %} GoDaddy logo {% endcomment %}
+                <div class="my__stack__case">
+                    <a href="https://www.godaddy.com/">
+                        <div class="my__stack__image">
+                            <img src="{% static 'media/images/mystack/1200px-GoDaddy_Logo_-_The_GO.png' %}" alt="">
+                        </div>
+                        <div class="my__stack__title__div">
+                            <div class="my__stack__title">
+                                <h3>GoDaddy</h3>
+                            </div>
+                            <div class="my__stack__subtitle">
+                                <p>{% translate "GoDaddy is the world’s largest and trusted domain registrar that empowers people like you with creative ideas to succeed online. Buying a domain name is easy with our domain search tool and domain name generator tools you can find the perfect website address for your business." %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% comment %} GoDaddy logo {% endcomment %}
+
+                {% comment %} JetBrains logo {% endcomment %}
+                <div class="my__stack__case">
+                    <a href="https://www.jetbrains.com/">
+                        <div class="my__stack__image">
+                            <img src="{% static 'media/images/mystack/jb_beam.png' %}" alt="">
+                        </div>
+                        <div class="my__stack__title__div">
+                            <div class="my__stack__title">
+                                <h3>JetBrains</h3>
+                            </div>
+                            <div class="my__stack__subtitle">
+                                <p>{% translate "Essential tools for software developers and teams. I believe that the company provides the opportunity to use some of the best IDEs for development." %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% comment %} JetBrains logo {% endcomment %}
+
+                {% comment %} Figma logo {% endcomment %}
+                <div class="my__stack__case">
+                    <a href="https://www.figma.com">
+                        <div class="my__stack__image">
+                            <img src="{% static 'media/images/mystack/Figma-1-logosd.png' %}" alt="">
+                        </div>
+                        <div class="my__stack__title__div">
+                            <div class="my__stack__title">
+                                <h3>Figma</h3>
+                            </div>
+                            <div class="my__stack__subtitle">
+                                <p>{% translate "The best design tool for UX, UI and product design. I use Figma every day as my main design tool of choice. Prototyping, auto layout, smart components, collaboration... it has it all." %}</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                {% comment %} Figma logo {% endcomment %}
+
+            </div>
+        </div>
+    </div>
+{% endblock %}

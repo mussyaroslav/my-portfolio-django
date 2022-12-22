@@ -1,0 +1,20 @@
+{% load portfolio_tags %}
+{% load i18n %}
+<section class="block__portfolio__nav">
+    <div class="container">
+        <div class="portfolio__nav__div">
+            <div class="portfolio__nav__title">
+                <h1>{% translate "Portfolio" %}.</h1>
+            </div>
+            <div class="portfolio__nav__menu">
+                {% url 'portfolio_index' as url_portfolio_index %}
+                <div><a {% if request.path == url_portfolio_index %} class="categories__link__active" {% else %} class="categories__non__active" {% endif %} href="{{ url_portfolio_index }}">{% translate "All" %}</a></div>
+                {% get_categories as categories %}
+                {% for item in categories %}
+                    {% url 'portfolio_category' item.pk as url_portfolio_category %}
+                    <div><a {% if request.path == url_portfolio_category %} class="categories__link__active" {% else %} class="categories__non__active" {% endif %} href="{{ url_portfolio_category }}">{{ item.title }}</a></div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</section>

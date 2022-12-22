@@ -1,0 +1,102 @@
+.my__stack__div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    padding: 25px 0;
+}
+
+.my__stack__div a {
+    text-decoration: none;
+}
+
+.my__stack__case {
+    display: flex;
+    max-width: 860px;
+    width: 100%;
+    padding: 25px;
+    border-radius: 5px;
+}
+
+.my__stack__case a {
+    display: flex;
+}
+
+.my__stack__case:hover {
+    background: var(--color-case-portfolio-hover);
+    transition: .12s all linear;
+}
+
+.my__stack__image {
+    width: 135px;
+    height: 135px;
+}
+
+.my__stack__image img {
+    width: 135px;
+    height: 135px;
+    border-radius: 5px;
+}
+
+.my__stack__title__div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 25px;
+}
+
+.my__stack__subtitle {
+    margin: 10px 0;
+}
+
+.my__stack__subtitle p {
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text-primary);
+}
+
+.my__stack__title h3 {
+    font-size: 26px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+@media (min-width: 575px) and (max-width: 767px) {
+    .my__stack__image {
+        width: 250px;
+        height: 250px;
+    }
+
+    .my__stack__image img {
+        width: 250px;
+        height: 250px;
+    }
+}
+
+@media (max-width: 575px) {
+    .my__stack__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    .my__stack__image img {
+        width: 100%;
+        height: 100%;
+    }
+
+    .my__stack__case a {
+        flex-direction: column;
+    }
+
+    .my__stack__title__div {
+        padding-left: 0;
+        padding-top: 10px;
+    }
+
+    .my__stack__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+}

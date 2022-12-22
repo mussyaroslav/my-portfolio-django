@@ -1,0 +1,123 @@
+.container {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container__header {
+  max-width: 1922px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 50px;
+}
+
+.container__portfolio {
+  max-width: 1170px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media (min-width: 1199px) and (max-width: 1240px) {
+  .container__header {
+    max-width: 1170px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 1020px) and (max-width: 1199px) {
+  .container__header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1020px) {
+  .container__header {
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+}
+
+@media (min-width: 991px) and (max-width: 1199px) {
+  .container {
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container__portfolio {
+    max-width: 990px;
+    width: 100%;
+    margin: 0 auto;
+  }
+}
+@media (min-width: 767px) and (max-width: 991px) {
+  .container {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container__header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 24px;
+  }
+
+  .container__portfolio {
+    max-width: 750px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+
+
+}
+@media (min-width: 575px) and (max-width: 767px) {
+  .container {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .container__header {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 14px;
+  }
+
+  .container__portfolio {
+    max-width: 570px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .header__right__div {
+    margin-right: 4px;
+  }
+}
+
+@media (max-width: 575px) {
+  .container {
+    width: 100%;
+    padding: 0 15px;
+  }
+
+  .container__header {
+    width: 100%;
+    padding: 0 11px;
+  }
+
+  .container__portfolio {
+    width: 100%;
+  }
+
+  .header__right__div {
+    margin-right: 4px;
+  }
+}

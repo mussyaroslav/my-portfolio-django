@@ -1,0 +1,26 @@
+:root {
+    --color-logo-header: #0e0e10;
+    --color-header-bg: #fff;
+    --color-body-bg: #f9f9f9;
+    --color-header-border-bottom: #dddfe0;
+    --color-text-primary: #0e0e10;
+    --color-text-secondary: #1f1f23;
+    --color-text-subtitle: #53535f;
+    --color-dropdown-div: #fff;
+    --box-shadow-dropdown-menu: 0 0 6px 0 rgb(0 0 0 / 4%), 0 4px 10px 0 rgb(13 35 67 / 25%);
+    --color-button-bg-secondary: #f2f2f2;
+    --color-button-bg-secondary-hover: #e8e8e8;
+    --color-header-link: #9147ff;
+    --color-brand: #9147ff;
+    --color-brand-400: #a269ff;
+    --color-brand-600: #8331f5;
+    --color-theme-toggle-bg: #fff;
+    --color-theme-toggle-ball: #9147ff;
+    --color-price: #fff;
+    --color-link: #1da1f3;
+    --color-link-hover: #1d8ff3;
+    --color-case-portfolio-hover: #fff;
+    --color-green-9: #018852;
+    --color-green-10: #00a865;
+    --color-green-11: #00c274;
+}

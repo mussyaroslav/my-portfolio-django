@@ -1,0 +1,41 @@
+input[type=checkbox] {
+  display: none;
+}
+
+.btn {
+  align-self: center;
+    margin-right: 10px;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 52px;
+  height: 28px;
+  background-color: var(--color-theme-toggle-bg);
+  transition: all .12s ease;
+  position: relative;
+  border-radius: 30px;
+  cursor: pointer;
+  border: 2px solid var(--color-theme-toggle-ball);
+}
+.box .ball {
+  width: 24px;
+  height: 24px;
+  background-color: var(--color-theme-toggle-ball);
+  transition: all .12s ease;
+  position: absolute;
+  border-radius: 50%;
+  border: 2px solid var(--color-theme-toggle-bg);
+}
+.box .scenary {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  transition: all .12s ease;
+  padding: 4px 5px 0 5px;
+}
+.box .scenary svg {
+  width: 17px;
+}

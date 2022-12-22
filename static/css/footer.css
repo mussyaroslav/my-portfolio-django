@@ -1,0 +1,135 @@
+.footer {
+    background: var(--color-header-bg);
+    width: 100%;
+    flex: 0 0 auto;
+}
+
+.footer__main {
+    padding: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer__nav__div {
+
+}
+
+.footer__main__left {
+    max-width: 270px;
+    padding: 10px 0;
+}
+
+.footer__logo {
+    height: 22px;
+    width: 100px;
+}
+
+.footer__logo svg {
+    height: 22px;
+    width: 100px;
+}
+
+.footer__logo svg:hover .cls-1 {
+    fill: var(--color-brand);
+    stroke: var(--color-brand);
+    transition: .12s all linear;
+}
+
+.footer__emain {
+    padding: 10px 0;
+}
+
+.footer__emain a:hover {
+    color: var(--color-brand);
+    transition: .12s all linear;
+}
+
+.footer__emain a {
+    color: var(--color-text-secondary);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+}
+
+.footer__creator {
+    font-size: 15px;
+    font-weight: 500;
+    padding-bottom: 10px;
+    color: var(--color-text-secondary);
+}
+
+.footer__last__update {
+    font-weight: 500;
+    font-size: 15px;
+    color: var(--color-text-secondary);
+}
+
+.footer__nav__div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-height: 160px;
+    margin-right: 60px;
+}
+
+.footer__link {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 0;
+    color: var(--color-text-secondary);
+    width: 100%;
+}
+
+.footer__link__active {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 0;
+    color: var(--color-brand);
+    width: 100%;
+}
+
+.footer__link:hover {
+    color: var(--color-brand);
+    transition: .12s all linear;
+}
+
+.footer__main__right {
+    max-height: 160px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__nav__social a{
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 5px 0;
+    color: var(--color-text-secondary);
+    width: 100%;
+}
+
+.footer__nav__social a:hover {
+    color: var(--color-brand);
+    transition: .12s all linear;
+}
+
+.footer__nav__social {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    max-height: 160px;
+}
+
+@media (max-width: 575px) {
+    .footer__main {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .footer__main__left {
+        margin-bottom: 40px;
+    }
+}

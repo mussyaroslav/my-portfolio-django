@@ -1,0 +1,89 @@
+.portfolio__nav__title11 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    margin-bottom: 25px;
+}
+
+.portfolio__nav__title11 h1 {
+    font-weight: 700;
+    font-size: 30px;
+}
+
+.portfolio__view__title {
+    margin: 10px 0;
+}
+
+.portfolio__view__title p {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.portfolio__view__content__div {
+    padding: 10px 0;
+}
+
+.portfolio__view__link__div {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.portfolio__view__link a {
+    color: var(--color-link);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.portfolio__view__link a:hover {
+    color: var(--color-link-hover);
+    text-decoration: underline;
+    transition: .12s all linear;
+}
+
+.portfolio__view__link p {
+    margin-right: 8px;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-text-primary);
+}
+
+.portfolio__view__link {
+    display: flex;
+    align-items: center;
+}
+
+.portfolio__view__price {
+    display: flex;
+}
+
+.portfolio__price__title {
+    margin-right: 8px;
+    font-weight: 600;
+    font-size: 16px;
+    color: var(--color-text-primary);
+}
+
+.portfolio__price {
+    color: var(--color-text-primary);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.swiper__subtitle {
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    display: flex;
+    color: var(--color-text-secondary);
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 575px) {
+    .portfolio__view__section__3 .container {
+        padding: 0;
+    }
+}

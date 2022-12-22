@@ -1,0 +1,124 @@
+.paginator__div {
+    display: flex;
+    margin: 5px 0 20px 0;
+}
+
+.previous__non__active::before {
+    content: "\f104";
+    display: block;
+    font-family: FontAwesome, sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--color-button-bg-secondary);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.previous__active::before {
+    content: "\f104";
+    display: block;
+    font-family: FontAwesome, sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--color-button-bg-secondary);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.next__non__active::before {
+    content: "\f105";
+    display: block;
+    font-family: FontAwesome, sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--color-button-bg-secondary);
+    font-weight: 700;
+    font-size: 18px;
+}
+
+.next__active::before {
+    content: "\f105";
+    display: block;
+    font-family: FontAwesome, sans-serif;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background: var(--color-button-bg-secondary);
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--color-link);
+    text-decoration: none;
+}
+
+.paginator__div a {
+    text-decoration: none;
+}
+
+.first__active {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px 10px;
+    background: var(--color-button-bg-secondary);
+    color: var(--color-link);
+    border-radius: 5px;
+}
+
+.first__active:hover {
+    background: var(--color-button-bg-secondary-hover);
+    color: var(--color-link-hover);
+    transition: .12s all linear;
+}
+
+.next__active:hover::before {
+    background: var(--color-button-bg-secondary-hover);
+    color: var(--color-link-hover);
+    transition: .12s all linear;
+}
+
+.previous__active:hover::before {
+    background: var(--color-button-bg-secondary-hover);
+    color: var(--color-link-hover);
+    transition: .12s all linear;
+}
+
+.previous__non__active:hover::before {
+    cursor: not-allowed;
+    transition: .12s all linear;
+}
+
+.next__non__active:hover::before {
+    cursor: not-allowed;
+    transition: .12s all linear;
+}
+
+.first__non__active:hover {
+    cursor: not-allowed;
+    transition: .12s all linear;
+}
+
+.first__non__active {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 3px 10px;
+    background: var(--color-button-bg-secondary);
+    border-radius: 5px;
+}
+
+.paginator__div {
+    display: flex;
+    align-items: center;
+}
+
+.paginator__div div {
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+
+.paginator__div div a {
+    margin: 5px;
+}
+.paginator__div div p {
+    margin: 5px;
+}

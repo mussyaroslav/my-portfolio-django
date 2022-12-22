@@ -1,0 +1,78 @@
+@charset "UTF-8";
+.burger {
+  width: 32px;
+  height: 32px;
+  position: relative;
+  display: none;
+  float: left;
+  z-index: 2021;
+}
+
+.drop__btn__nav {
+  width: 32px;
+  height: 32px;
+  margin: 0;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+  fill: var(--color-text-primary);
+}
+
+.drop__btn__nav:hover, .drop__btn__nav:focus, .drop__btn__nav:active {
+  /* Обводка кнопки */
+  outline: none;
+}
+
+.dropdown-content__nav {
+  display: none;
+  position: absolute;
+  min-width: 140px;
+  box-shadow: var(--box-shadow-dropdown-menu);
+  left: 0;
+  overflow: auto;
+  border-radius: 5px;
+  background: var(--color-dropdown-div);
+  top: 35px;
+  padding: 5px;
+}
+
+.show {
+  display: block;
+}
+
+.dropdown__block {
+  /* Блок кнопки */
+  width: 36px;
+  height: 32px;
+  border-radius: 32px;
+  padding-right: 4px;
+  position: relative;
+  display: inline-block;
+  float: left;
+}
+
+.dropdown-content__nav a {
+  color: var(--color-text-primary);
+  padding: 5px 10px;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.dropdown-content__nav a:hover {
+  background-color: var(--color-button-bg-secondary-hover);
+  transition: all 0.12s linear;
+}
+
+@media (max-width: 767px) {
+  .burger {
+    display: inline-block;
+  }
+
+  .nav__main {
+    display: none;
+  }
+}

@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+    {% translate "Yaroslav Muss | About me" %}
+{% endblock %}
+{% block content %}
+    <section>
+        <div class="container">
+            {% for item in about %}
+                <img src="{{ item.image.url }}" alt="">
+                {{ item.title }}
+            {% endfor %}
+        </div>
+    </section>
+{% endblock %}

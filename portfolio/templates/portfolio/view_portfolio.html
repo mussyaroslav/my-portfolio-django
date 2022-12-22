@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+{% load i18n %}
+{% load static %}
+{% block title %}
+    {% translate "Portfolio" %}
+{% endblock %}
+{% block content %}
+    <section class="portfolio__view__section__3">
+        <div class="container">
+            <div class="portfolio__nav__title11">
+                {% if "/en/" in request.path %}
+                <h1>{{ portfolio_item.title_portfolio }}</h1>
+                {% endif %}
+                {% if "/ru/" in  request.path %}
+                <h1>{{ portfolio_item.title_portfolio_ru }}</h1>
+                {% endif %}
+            </div>
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    {% for p in photos %}
+                        <div class="swiper-slide">
+                            <img alt="" src="{{ p.images.url }}">
+                            <div class="swiper__subtitle">
+                                {% if "/ru/" in  request.path %}
+                                {{ p.subtitle_images_ru }}
+                                {% endif %}
+                                {% if "/en/" in  request.path %}
+                                {{ p.subtitle_images }}
+                                {% endif %}
+                            </div>
+                        </div>
+                    {% endfor %}
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+    </section>
+    <section class="portfolio__view__section">
+        <div class="container">
+            <div class="portfolio__view__content__div">
+                {% for i in photos %}
+                    {% if "/ru/" in  request.path %}
+                        <div class="portfolio__view__title">
+                            <p>{{ i.title_images_ru|linebreaksbr }}</p>
+                        </div>
+                    {% endif %}
+                    {% if "/en/" in  request.path %}
+                        <div class="portfolio__view__title">
+                            <p>{{ i.title_images|linebreaksbr }}</p>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+            </div>
+            <div class="portfolio__view__link__div">
+                <div class="portfolio__view__link">
+                {% if portfolio_item.preview %}
+                    <p>{% translate "Link:"%}</p>
+                    <a href="{{ portfolio_item.preview }}">{{ portfolio_item.preview }}</a>
+                {% endif %}
+                </div>
+                {% if portfolio_item.price_ru and portfolio_item.price_dollar %}
+                <div class="portfolio__view__price">
+                    {% if "/ru/" in  request.path %}
+                        <p class="portfolio__price__title">Стоимость работы:</p>
+                        <p class="portfolio__price">{{ portfolio_item.price_ru }}</p>
+                    {% endif %}
+                    {% if "/en/" in  request.path %}
+                        <p class="portfolio__price__title">Cost of work :</p>
+                        <p class="portfolio__price">{{ portfolio_item.price_dollar }}</p>
+                    {% endif %}
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </section>
+{% endblock %}
